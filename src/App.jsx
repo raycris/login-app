@@ -1,9 +1,18 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
+import Home from "./Pages/Home";
+import Login from "./Pages/Login";
+
 function App() {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">Quiero estar en tarima</h1>
-      <div className="text-lg">Goyaaa</div>
-    </>
+    <div className="w-full h-screen justify-center items-end">
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/login" element={<Login />} />
+        </Routes>
+      </Router>
+    </div>
   );
 }
 
